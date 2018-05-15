@@ -13,6 +13,7 @@ export class ThirdPageComponent implements OnInit {
 	private isdata : boolean;
 
 	ngOnInit() {
+		console.log(this.routerInfo.snapshot.data[0].isdata)
 		this.isdata = this.routerInfo.snapshot.data[0].isdata
 	}
 

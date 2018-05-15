@@ -15,6 +15,8 @@ export class FirstPageComponent implements OnInit {
 	
 
 	ngOnInit() {
+		console.log(this.routerInfo);
+		console.log(this.routerInfo.snapshot.queryParams.id)
 		this.routerdata = this.routerInfo.snapshot.queryParams["id"]
 		
 	}

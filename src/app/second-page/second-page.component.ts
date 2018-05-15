@@ -15,6 +15,7 @@ export class SecondPageComponent implements OnInit {
     private routerData:number;
 	
 	ngOnInit() {
+		console.log(this.routerInfo.snapshot.params.id)
 		this.routerData = this.routerInfo.snapshot.params["id"]
 	}
 

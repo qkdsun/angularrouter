@@ -25,7 +25,7 @@ export class StockComponent implements OnInit {
 
 		// this.stockId = this.routerInfo.snapshot.params["id"];  // 第二种 获得路由传值
 		
-		this.routerInfo.params.subscribe((params:Params) => this.stockId = params["id"]) // 监听路由跳转
+		this.routerInfo.params.subscribe((params:Params) => this.stockId = params["id"]) // 监听路由跳转  订阅
 
 		this.isPro = this.routerInfo.snapshot.data[0].isPro
 	}

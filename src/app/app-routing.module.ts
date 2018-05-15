@@ -11,8 +11,8 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent} from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
 const routes: Routes = [ // 路由配置
-	// {path: '' , redirectTo: '/Home', pathMatch: 'full'}, // 路由重定向 
-	{path: 'xx' , redirectTo: '/Home', pathMatch: 'prefix'}, // 路由重定向xx   localhost:4200/xx
+	{path: '' , redirectTo: '/Home', pathMatch: 'full'}, // 路由重定向 
+	// {path: 'xx' , redirectTo: '/Home', pathMatch: 'prefix'}, // 路由重定向xx   localhost:4200/xx
     {path: 'Home' , component:HomeComponent},
     // {path: 'stock', component:StockComponent},  // 第一种路由传参
     // {path: 'stock/:id', component:StockComponent}, // 第二种路由传参
