@@ -10,6 +10,7 @@ import { SellerListComponent } from './seller-list/seller-list.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent} from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
+import { ChatComponent } from './chat/chat.component';
 const routes: Routes = [ // 路由配置
 	{path: '' , redirectTo: '/Home', pathMatch: 'full'}, // 路由重定向 
 	// {path: 'xx' , redirectTo: '/Home', pathMatch: 'prefix'}, // 路由重定向xx   localhost:4200/xx
@@ -29,6 +30,7 @@ const routes: Routes = [ // 路由配置
 	{path: 'third', component: ThirdPageComponent, data:[{isdata: false}]}, // 第三种路由传参
 
 
+    {path: 'chat',component:ChatComponent, outlet: 'aux'}, // 辅助路由
     {path: '**',component:Code404Component} // 放在最后面
     
 ];

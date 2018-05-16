@@ -12,6 +12,7 @@ import { SellerListComponent } from './seller-list/seller-list.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ThirdPageComponent } from './third-page/third-page.component';
     SellerListComponent,
     FirstPageComponent,
     SecondPageComponent,
-    ThirdPageComponent
+    ThirdPageComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
