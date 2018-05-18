@@ -13,6 +13,8 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
 import { ChatComponent } from './chat/chat.component';
+import { PermissionGuard } from './Permission.Guard';
+import { FocusGuard } from './focusGuard';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import { ChatComponent } from './chat/chat.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PermissionGuard,FocusGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,10 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent} from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
 import { ChatComponent } from './chat/chat.component';
+import { PermissionGuard } from './Permission.Guard';
+import { FocusGuard } from './focusGuard';
+
+
 const routes: Routes = [ // 路由配置
 	{path: '' , redirectTo: '/Home', pathMatch: 'full'}, // 路由重定向 
 	// {path: 'xx' , redirectTo: '/Home', pathMatch: 'prefix'}, // 路由重定向xx   localhost:4200/xx
@@ -25,8 +29,8 @@ const routes: Routes = [ // 路由配置
 		
 	]}, // 第三种
 	
-	{path: 'first', component:FirstPageComponent}, // 第一种路由传参
-	{path: 'second/:id', component: SecondPageComponent}, // 第二种路由传参
+	{path: 'first', component:FirstPageComponent ,canActivate: [PermissionGuard]}, // 第一种路由传参
+	{path: 'second/:id', component: SecondPageComponent, canDeactivate: [FocusGuard]}, // 第二种路由传参
 	{path: 'third', component: ThirdPageComponent, data:[{isdata: false}]}, // 第三种路由传参
 
 
